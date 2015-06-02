@@ -18,11 +18,15 @@
 * download and apply manifests from this git repo
     * clone this repo to /etc/puppet/modules/
     * install required puppet modules using a shell script from this repo (./install_modules.sh)
-    * apply configuration to your machine (puppet apply site.pp)
-* put credentials and hostname in ddclient config at: '/etc/ddclient/ddclient.conf'
+    * apply configuration to your machine: puppet apply site.pp | tee -a /var/log/puppet/apply_run.log
+    * if you're getting errors, run the above command until you get no errors. This will be fixed in future releases.
+* start Dynamic DNS service
+    * put credentials and hostname in ddclient config at: '/etc/ddclient/ddclient.conf'
+    * restart service: systemctl restart ddclient
 * create SELinux policy for nginx:
     * http://superuser.com/questions/809527/nginx-cant-connect-to-uwsgi-socket-with-correct-permissions
 * open webrowser and go to: technical-analysis.sytes.net
+    * if something is not working restart nginx and uwsgi
 
 
 
