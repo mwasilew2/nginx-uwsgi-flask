@@ -26,7 +26,7 @@
 * create SELinux policy for nginx:
     * http://superuser.com/questions/809527/nginx-cant-connect-to-uwsgi-socket-with-correct-permissions
 * open webrowser and go to: technical-analysis.sytes.net
-    * if something is not working
+    * if something is not working restart nginx and uwsgi
 
 
 
